@@ -1,13 +1,16 @@
-package com.pm.patient_service.serviceImpl;
+package com.pm.patient_service.service.impl;
 
 import com.pm.patient_service.dto.request.PatientRequestDTO;
 import com.pm.patient_service.dto.response.PatientResponseDTO;
 import com.pm.patient_service.exception.EmailAlreadyExistsException;
-import com.pm.patient_service.exception.PatientNotFoundException;
+import com.pm.patient_service.grpc.BillingServiceGrpcClient;
+import com.pm.patient_service.kafka.KafkaProducer;
 import com.pm.patient_service.mapper.PatientMapper;
 import com.pm.patient_service.model.Patient;
 import com.pm.patient_service.repository.PatientRepository;
+import com.pm.patient_service.repository.service.PatientRepositoryService;
 import com.pm.patient_service.service.PatientService;
+import com.pm.patient_service.utils.TimeUtils;
 import com.pm.patient_service.utils.constants.Commons;
 import com.pm.patient_service.utils.message.ErrorMessageUtils;
 import com.pm.patient_service.utils.message.SuccessMessageUtils;
@@ -27,16 +30,20 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class PatientServiceImpl implements PatientService {
     private final PatientRepository patientRepository;
+    private final PatientRepositoryService patientRepositoryService;
+    private final BillingServiceGrpcClient billingServiceGrpcClient;
+    private final KafkaProducer kafkaProducer;
 
     private static final String className = "PatientServiceImpl";
 
 
     @Override
     public Page<PatientResponseDTO> getPatients(Pageable pageable) {
+        TimeUtils.start();
         log.info("{} => getPatients()", className);
-
-        Page<Patient> patients = findAllPatients(pageable);
-        log.info(SuccessMessageUtils.SUCCESS_OPERATION.formatted("Fetched","patients"));
+        Page<Patient> patients = patientRepositoryService.findAllPatients(pageable);
+        TimeUtils.stop();
+        log.info(SuccessMessageUtils.SUCCESS_OPERATION.formatted("Fetched","patients in {}"), TimeUtils.getDuration());
         return patients.map(PatientMapper::toDTO);
     }
 
@@ -48,15 +55,21 @@ public class PatientServiceImpl implements PatientService {
                 throw new EmailAlreadyExistsException(ErrorMessageUtils
                         .ALREADY_EXIST.formatted("A patient", "email" ) + dto.getEmail());
 
-            Patient newPatient = savePatient(PatientMapper.toModel(dto));
+            Patient newPatient = patientRepositoryService.savePatient(PatientMapper.toModel(dto));
             log.info(SuccessMessageUtils.SUCCESS_OPERATION.formatted("✅"+Commons.PATIENT,"created"));
+
+            billingServiceGrpcClient.createBillingAccount(newPatient.getId().toString(),
+                    newPatient.getName().toString(), newPatient.getEmail().toString());
+
+            kafkaProducer.sendEvent(newPatient);
+
             return PatientMapper.toDTO(newPatient);
     }
 
     @Override
     public PatientResponseDTO updatePatient(UUID id, PatientRequestDTO dto) {
         log.info("{} => updatePatient()", className);
-            Patient patient = findPatientById(id);
+            Patient patient = patientRepositoryService.findPatientById(id);
 
         if (patientRepository.existsByEmail(dto.getEmail()))
             throw new EmailAlreadyExistsException(ErrorMessageUtils
@@ -67,40 +80,19 @@ public class PatientServiceImpl implements PatientService {
         patient.setEmail(dto.getEmail());
         patient.setDateOfBirth(LocalDate.parse(dto.getDateOfBirth()));
         patient.setUpdatedOn(LocalDateTime.now());
-       Patient updatedPatient = savePatient(patient);
+       Patient updatedPatient = patientRepositoryService.savePatient(patient);
         log.info(SuccessMessageUtils.SUCCESS_OPERATION.formatted("✅"+Commons.PATIENT,"updated"));
 
         return PatientMapper.toDTO(updatedPatient);
     }
     @Override
     public void deletePatient(UUID id) {
-        deletePatientById(id);
+        log.info("{} => deletePatient() => id - {}", className, id);
+        patientRepositoryService.findPatientById(id);
+        patientRepositoryService.deletePatientById(id);
+        log.info(SuccessMessageUtils.SUCCESS_OPERATION.formatted("✅"+ Commons.PATIENT, "deleted"));
     }
 
-
-    ///////////
-    @Override
-    public Page<Patient> findAllPatients(Pageable pageable){
-        return patientRepository.findAll(pageable);
-    }
-
-    @Override
-    public Patient savePatient(Patient patient){
-        return patientRepository.save(patient);
-    }
-
-    @Override
-    public Patient findPatientById(UUID id){
-
-        return patientRepository.findById(id).orElseThrow(
-                () -> new PatientNotFoundException(ErrorMessageUtils.NOT_FOUND.formatted(Commons.PATIENT + id))
-        );
-    }
-
-    @Override
-    public void deletePatientById(UUID id) {
-        patientRepository.deleteById(id);
-    }
 
 
 

@@ -1,4 +1,4 @@
-package com.pm.patient_service.dto;
+package com.pm.patient_service.dto.response;
 
 import lombok.Data;
 
