@@ -24,7 +24,7 @@ import java.util.UUID;
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/patient")
+@RequestMapping("/patients")
 @Tag(name = "Patient",description = "API for managing Patients")
 public class PatientController {
     @Autowired

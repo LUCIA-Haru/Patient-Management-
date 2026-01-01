@@ -5,44 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f32e25a-ebcf-4bd4-bc29-f3d78de94e9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/analytics-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/kafka/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/pm/api_gateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/PatientServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/PatientServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/config/ApiResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/config/ApiResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/config/ResponseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/config/ResponseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/AnalyticsServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/AnalyticsServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/dto/request/PatientRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/dto/request/PatientRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/dto/response/PatientResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/dto/response/PatientResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/dto/validators/CreatePatientValidationGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/dto/validators/CreatePatientValidationGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/exception/EmailAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/exception/EmailAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/exception/PatientNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/exception/PatientNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/grpc/BillingServiceGrpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/grpc/BillingServiceGrpcClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/kafka/KafkaProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/mapper/PatientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/mapper/PatientMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/model/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/repository/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/repository/PatientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/repository/service/PatientRepositoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/repository/service/PatientRepositoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/repository/service/impl/PatientRepositoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/repository/service/impl/PatientRepositoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/response/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/response/MetadataResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/response/MetadataResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/response/PaginationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/response/PaginationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/PatientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/impl/PatientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/impl/PatientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/RequestValidationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/RequestValidationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/TimeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/constants/Commons.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/constants/Commons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/message/ErrorMessageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/message/ErrorMessageUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/message/SuccessMessageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/utils/message/SuccessMessageUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto-contract/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +46,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LUCIA-Haru&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LUCIA-Haru/Patient-Management-.git&quot;,
+    &quot;accountId&quot;: &quot;af1096bf-539a-4d2f-b862-fa6f6da64611&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -82,46 +79,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.BillingService.executor&quot;: &quot;Run&quot;,
-    &quot;Application.patientService.executor&quot;: &quot;Debug&quot;,
-    &quot;Docker.billing-service.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.kafka.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.patient-service-db.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.patient-service.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.analytics-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.analytics-service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.billing-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.billing-service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.patient-management-microservice [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.patient-management-microservice [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.patient-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.patient-service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.proto-contracts [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.proto-contracts [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.proto-contracts [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Practicing/Project/Spring/patient-managment-microservice/analytics-service/src/main&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.BillingService.executor": "Run",
+    "Application.api-gateway.executor": "Debug",
+    "Application.patientService.executor": "Debug",
+    "Attach to process.localhost:5005.executor": "ProcessAttachDebug",
+    "Docker.analytics-service.executor": "Run",
+    "Docker.api-gateway.executor": "Run",
+    "Docker.billing-service.executor": "Run",
+    "Docker.kafka.executor": "Run",
+    "Docker.patient-service-db.executor": "Run",
+    "Docker.patient-service.executor": "Run",
+    "Maven.analytics-service [clean,compile].executor": "Run",
+    "Maven.analytics-service [clean].executor": "Run",
+    "Maven.analytics-service [compile].executor": "Run",
+    "Maven.analytics-service [mvn,clean,compile].executor": "Run",
+    "Maven.api-gateway [clean].executor": "Run",
+    "Maven.api-gateway [compile].executor": "Run",
+    "Maven.api-gateway [package].executor": "Run",
+    "Maven.billing-service [clean].executor": "Run",
+    "Maven.billing-service [compile].executor": "Run",
+    "Maven.patient-management-microservice [clean].executor": "Run",
+    "Maven.patient-management-microservice [install].executor": "Run",
+    "Maven.patient-service [clean].executor": "Run",
+    "Maven.patient-service [compile].executor": "Run",
+    "Maven.proto-contracts [clean].executor": "Run",
+    "Maven.proto-contracts [compile].executor": "Run",
+    "Maven.proto-contracts [install].executor": "Run",
+    "Remote JVM Debug.Analytics-Service Remote Debug.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Practicing/Project/Spring/patient-managment-microservice/api-gateway/Dockerfile",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\api-gateway" />
+      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\analytics-service" />
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\analytics-service\src\main" />
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\billing-service\src\main" />
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\patient-service\src\main" />
-      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\proto-contract\src\main\proto" />
-      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\analytics-service\src\main\proto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\proto-contract" />
@@ -141,12 +148,85 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="api-gateway" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.pm.api_gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="patientService" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.pm.patient_service.PatientServiceApplication" />
       <module name="patient-service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Analytics-Service Remote Debug" type="Remote">
+      <module name="analytics-service" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="analytics-service" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="analytics-service:latest" />
+          <option name="containerName" value="analytics-service" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="JAVA_OPTS" />
+                <option name="value" value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="4002" />
+                <option name="hostPort" value="4002" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="5005" />
+                <option name="hostPort" value="5005" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="--network internal" />
+          <option name="sourceFilePath" value="analytics-service/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="api-gateway" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="api-gateway:latest" />
+          <option name="containerName" value="api-gateway" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="4004" />
+                <option name="hostPort" value="4004" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="--network internal" />
+          <option name="sourceFilePath" value="api-gateway/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
     </configuration>
     <configuration name="billing-service" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
@@ -191,20 +271,36 @@
                 <option name="value" value="1@kafka:9093" />
               </DockerEnvVarImpl>
               <DockerEnvVarImpl>
+                <option name="name" value="KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS" />
+                <option name="value" value="0" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
                 <option name="name" value="KAFKA_LISTENER_SECURITY_PROTOCOL_MAP" />
-                <option name="value" value="CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT,PLAINTEXT:PLAINTEXT" />
+                <option name="value" value="CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT" />
               </DockerEnvVarImpl>
               <DockerEnvVarImpl>
                 <option name="name" value="KAFKA_LISTENERS" />
-                <option name="value" value="PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094" />
+                <option name="value" value="PLAINTEXT://0.0.0.0:9092,EXTERNAL://0.0.0.0:9094,CONTROLLER://0.0.0.0:9093" />
               </DockerEnvVarImpl>
               <DockerEnvVarImpl>
                 <option name="name" value="KAFKA_NODE_ID" />
                 <option name="value" value="1" />
               </DockerEnvVarImpl>
               <DockerEnvVarImpl>
+                <option name="name" value="KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR" />
+                <option name="value" value="1" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
                 <option name="name" value="KAFKA_PROCESS_ROLES" />
-                <option name="value" value="controller,broker" />
+                <option name="value" value="broker,controller" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="KAFKA_TRANSACTION_STATE_LOG_MIN_ISR" />
+                <option name="value" value="1" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR" />
+                <option name="value" value="1" />
               </DockerEnvVarImpl>
             </list>
           </option>
@@ -299,21 +395,13 @@
                 <option name="value" value="update" />
               </DockerEnvVarImpl>
               <DockerEnvVarImpl>
-                <option name="name" value="SPRING_SQL_INIT_MODE" />
-                <option name="value" value="always" />
-              </DockerEnvVarImpl>
-              <DockerEnvVarImpl>
                 <option name="name" value="SPRING_KAFKA_BOOTSTRAP_SERVERS" />
                 <option name="value" value="kafka:9092" />
               </DockerEnvVarImpl>
-            </list>
-          </option>
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="4000" />
-                <option name="hostPort" value="4000" />
-              </DockerPortBindingImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_SQL_INIT_MODE" />
+                <option name="value" value="always" />
+              </DockerEnvVarImpl>
             </list>
           </option>
           <option name="commandLineOptions" value="--network internal" />
@@ -323,12 +411,16 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.api-gateway" />
       <item itemvalue="Application.BillingService" />
       <item itemvalue="Application.patientService" />
       <item itemvalue="Docker.billing-service" />
       <item itemvalue="Docker.patient-service-db" />
       <item itemvalue="Docker.patient-service" />
+      <item itemvalue="Docker.analytics-service" />
+      <item itemvalue="Docker.api-gateway" />
       <item itemvalue="Docker.kafka" />
+      <item itemvalue="Remote JVM Debug.Analytics-Service Remote Debug" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -344,5 +436,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/kafka/KafkaConsumer.java</url>
+          <line>36</line>
+          <properties class="com.pm.analytics_service.kafka.KafkaConsumer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/kafka/KafkaConsumer.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

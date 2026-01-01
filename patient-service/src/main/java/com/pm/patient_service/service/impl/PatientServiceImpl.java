@@ -62,6 +62,7 @@ public class PatientServiceImpl implements PatientService {
                     newPatient.getName().toString(), newPatient.getEmail().toString());
 
             kafkaProducer.sendEvent(newPatient);
+        log.info("Kafka: Patient event sent for ID: {}", newPatient.getId());
 
             return PatientMapper.toDTO(newPatient);
     }

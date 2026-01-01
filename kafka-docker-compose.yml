@@ -1,0 +1,52 @@
+version: '3.7'
+
+services:
+  kafka:
+    image: apache/kafka:latest
+    hostname: kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+      - "9094:9094"
+
+    environment:
+      # --- KRaft Configuration ---
+      KAFKA_PROCESS_ROLES: 'broker,controller'
+      KAFKA_NODE_ID: 1
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:9093'
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,EXTERNAL://0.0.0.0:9094,CONTROLLER://0.0.0.0:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+
+      # *** THIS LINE IS CRUCIAL FOR DOCKER-TO-DOCKER COMMUNICATION ***
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:9094
+
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_LOG_DIRS: '/var/lib/kafka/data'
+
+    command: >
+      /bin/bash -c "
+        if [ ! -f '/tmp/kraft-cluster-id' ]; then
+          export KAFKA_CLUSTER_ID=\"$(/opt/kafka/bin/kafka-storage.sh random-uuid)\"
+          echo \"$KAFKA_CLUSTER_ID\" > /tmp/kraft-cluster-id
+        else
+          export KAFKA_CLUSTER_ID=\"$(cat /tmp/kraft-cluster-id)\"
+        fi
+        /opt/kafka/bin/kafka-storage.sh format -t \"$KAFKA_CLUSTER_ID\" -c /opt/kafka/config/server.properties --ignore-formatted --standalone
+        /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
+      "
+
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+      - kafka_config:/tmp/
+
+    # Ensure network connection is included from the previous step
+    networks:
+      - internal
+
+networks:
+  internal:
+    external: true
+
+volumes:
+  kafka_data:
+  kafka_config:
