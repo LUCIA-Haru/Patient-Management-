@@ -1,0 +1,16 @@
+services:
+  localstack:
+    container_name: localstack_main
+    image: localstack/localstack-pro:latest
+    ports:
+      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+      - "127.0.0.1:4510-4559:4510-4559"  # Service port range
+    environment:
+      - LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN}
+      - ACTIVATE_PRO=1                   # Force it to run in Free/Community mode
+      - DEBUG=1
+      - LAMBDA_EXECUTOR=docker
+      - MSK_BOOTSTRAP_TIMEOUT=300 # Increase internal MSK timeout mem_limit: 4g # Give LocalStack enough room to run Kafka
+    volumes:
+      - "./ls_data:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"

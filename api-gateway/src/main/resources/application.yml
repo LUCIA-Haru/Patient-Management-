@@ -4,6 +4,12 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: auth-service-route
+          uri: http://auth-service:4005
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
         # Route for Patient Service API
         - id: patient-service-route
           uri: http://patient-service:4000
@@ -11,7 +17,8 @@ spring:
             - Path=/api/patients, /api/patients/**
           filters:
             - StripPrefix=1
-
+            - JwtValidation
+#  JwtValidationGatewayFilterFactory -> first part of this class match the name of JwtValidation coz spring framework will manage
         # Route for Patient Service Swagger/OpenAPI Docs
         - id: api-docs-patient-route
           uri: http://patient-service:4000
@@ -20,22 +27,28 @@ spring:
           filters:
             - RewritePath=/api-docs/patients, /v3/api-docs
 
+        - id: api-docs-auth-route
+          uri: http://auth-service:4005
+          predicates:
+            - Path=/api-docs/auth
+          filters:
+            - RewritePath=/api-docs/auth, /v3/api-docs
 server:
   port: 4004
 
-# Expose Actuator to help you debug route loading
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+## Expose Actuator to help you debug route loading
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#
+#  endpoint:
+#    gateway:
+#      enabled: true
 
-  endpoint:
-    gateway:
-      enabled: true
-
-logging:
-  level:
-    root: INFO
-    org.springframework.cloud.gateway: TRACE
-    org.springframework.http.server.reactive: DEBUG
+#logging:
+#  level:
+#    root: INFO
+#    org.springframework.cloud.gateway: TRACE
+#    org.springframework.http.server.reactive: DEBUG

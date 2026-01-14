@@ -5,29 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f32e25a-ebcf-4bd4-bc29-f3d78de94e9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/analytics-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/kafka/KafkaConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/ApiGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/pm/api_gateway/ApiGatewayApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/config/ApiResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/config/ResponseMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/exception/EmailAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/exception/InvalidCredentialException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/exception/InvalidEmailException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/exception/JwtException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/exception/UnAuthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/filter/JwtValidationGatewayFilterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/response/MetadataResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/response/PaginationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/utils/RequestValidationUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/utils/TimeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/utils/constants/Commons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/utils/message/ErrorMessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pm/api_gateway/utils/message/SuccessMessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/AuthServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/config/ApiResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/config/ResponseMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/config/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/dto/LoginRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/dto/LoginResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/exception/EmailAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/exception/InvalidCredentialException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/exception/InvalidEmailException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/exception/JwtException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/exception/UnAuthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/response/MetadataResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/response/PaginationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/service/impl/auth/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/service/impl/user/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/utils/RequestValidationUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/utils/TimeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/utils/constants/Commons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/utils/jwt/JWTUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/utils/message/ErrorMessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/utils/message/SuccessMessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/cdk.out/cdk.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/cdk.out/localstack.template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/cdk.out/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/cdk.out/tree.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/localstack-deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/src/main/java/com/pm/infrasture/InfrastureApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/src/main/java/com/pm/stack/LocalStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrasture/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/src/main/java/com/pm/integration_tests/IntegrationTestsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/src/test/java/integration_tests/AuthIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/integration-tests/src/test/java/integration_tests/PatientIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localstack-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ls_data/cache/machine.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ls_data/cache/server.test.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ls_data/cache/server.test.pem.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ls_data/cache/server.test.pem.key" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/AnalyticsServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/AnalyticsServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/kafka/KafkaProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/impl/PatientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/impl/PatientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/pm/api_gateway/ApiGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrasture/src/test/java/com/pm/infrasture/InfrastureApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,16 +155,25 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.AuthService.executor": "Debug",
     "Application.BillingService.executor": "Run",
+    "Application.LocalStack.executor": "Run",
     "Application.api-gateway.executor": "Debug",
     "Application.patientService.executor": "Debug",
     "Attach to process.localhost:5005.executor": "ProcessAttachDebug",
     "Docker.analytics-service.executor": "Run",
     "Docker.api-gateway.executor": "Run",
+    "Docker.auth-service-db.executor": "Run",
+    "Docker.auth-service.executor": "Run",
     "Docker.billing-service.executor": "Run",
     "Docker.kafka.executor": "Run",
+    "Docker.localstack-compose.yml: Compose Deployment.executor": "Run",
     "Docker.patient-service-db.executor": "Run",
     "Docker.patient-service.executor": "Run",
+    "JUnit.AuthIntegrationTest.executor": "Run",
+    "JUnit.AuthIntegrationTest.shouldReturnOKWithValidToken.executor": "Debug",
+    "JUnit.AuthIntegrationTest.shouldReturnUnauthorizedOnInvalidLogin.executor": "Run",
+    "JUnit.PatientIntegrationTest.shouldReturnPatientsWithValidToken.executor": "Run",
     "Maven.analytics-service [clean,compile].executor": "Run",
     "Maven.analytics-service [clean].executor": "Run",
     "Maven.analytics-service [compile].executor": "Run",
@@ -115,7 +197,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Practicing/Project/Spring/patient-managment-microservice/api-gateway/Dockerfile",
+    "last_opened_file_path": "D:/Practicing/Project/Spring/patient-managment-microservice/infrasture",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -124,11 +206,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\api-gateway\src\main\java\com\pm\api_gateway" />
+      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\auth-service\src\main\java\com\pm\auth_service" />
+      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\auth-service" />
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\api-gateway" />
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\analytics-service" />
-      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\analytics-service\src\main" />
-      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\billing-service\src\main" />
-      <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\patient-service\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\proto-contract" />
@@ -137,13 +219,46 @@
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice" />
       <recent name="D:\Practicing\Project\Spring\patient-managment-microservice\patient-service" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.pm.integration_tests" />
+    </key>
   </component>
-  <component name="RunManager" selected="Docker.patient-service">
+  <component name="RunManager" selected="Application.patientService">
+    <configuration name="AuthService" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="JWT_SECRET" value="NLMoZUpfbt3xOyGOiepsONVzNXpH41zvIFMKM4MHjxT" />
+        <env name="SPRING_DATASOURCE_PASSWORD" value="password" />
+        <env name="SPRING_DATASOURCE_URL" value="jdbc:postgresql://localhost:5001/db" />
+        <env name="SPRING_DATASOURCE_USERNAME" value="admin_user" />
+        <env name="SPRING_JPA_HIBERNATE_DDL_AUTO" value="update" />
+        <env name="SPRING_SQL_INIT_MODE" value="always" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.pm.auth_service.AuthServiceApplication" />
+      <module name="auth-service" />
+      <option name="VM_PARAMETERS" value="-Duser.timezone=Asia/Yangon " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BillingService" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.pm.billing_service.BillingServiceApplication" />
       <module name="billing-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocalStack" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.pm.stack.LocalStack" />
+      <module name="infrasture" />
+      <shortenClasspath name="ARGS_FILE" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/infrasture" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,6 +279,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration-tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration_tests" />
+      <option name="MAIN_CLASS_NAME" value="integration_tests.AuthIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthIntegrationTest.shouldReturnOKWithValidToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration-tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration_tests" />
+      <option name="MAIN_CLASS_NAME" value="integration_tests.AuthIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldReturnOKWithValidToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthIntegrationTest.shouldReturnUnauthorizedOnInvalidLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration-tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration_tests" />
+      <option name="MAIN_CLASS_NAME" value="integration_tests.AuthIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldReturnUnauthorizedOnInvalidLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientIntegrationTest.shouldReturnPatientsWithValidToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration-tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration_tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration_tests" />
+      <option name="MAIN_CLASS_NAME" value="integration_tests.PatientIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldReturnPatientsWithValidToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Analytics-Service Remote Debug" type="Remote">
       <module name="analytics-service" />
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -176,6 +354,12 @@
         <option name="DEBUG_PORT" value="5005" />
         <option name="LOCAL" value="false" />
       </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="analytics-service" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
@@ -214,6 +398,14 @@
         <settings>
           <option name="imageTag" value="api-gateway:latest" />
           <option name="containerName" value="api-gateway" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="AUTH_SERVICE_URL" />
+                <option name="value" value="http://auth-service:4005" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
           <option name="portBindings">
             <list>
               <DockerPortBindingImpl>
@@ -224,6 +416,87 @@
           </option>
           <option name="commandLineOptions" value="--network internal" />
           <option name="sourceFilePath" value="api-gateway/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="auth-service-db" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="postgres:latest" />
+          <option name="containerName" value="auth-service-db" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="POSTGRES_USER" />
+                <option name="value" value="admin_user" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="POSTGRES_PASSWORD" />
+                <option name="value" value="password" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="POSTGRES_DB" />
+                <option name="value" value="db" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="5432" />
+                <option name="hostPort" value="5001" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="--network internal" />
+          <option name="volumeBindings">
+            <list>
+              <DockerVolumeBindingImpl>
+                <option name="containerPath" value="/var/lib/postgresql" />
+                <option name="hostPath" value="D:\Practicing\Docker\db_volumes\auth-service-db" />
+              </DockerVolumeBindingImpl>
+            </list>
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="auth-service" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="auth-service:latest" />
+          <option name="containerName" value="auth-service" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="JWT_SECRET" />
+                <option name="value" value="NLMoZUpfbt3xOyGOiepsONVzNXpH41zvIFMKM4MHjxT" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_DATASOURCE_PASSWORD" />
+                <option name="value" value="password" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_DATASOURCE_URL" />
+                <option name="value" value="jdbc:postgresql://auth-service-db:5432/db" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_DATASOURCE_USERNAME" />
+                <option name="value" value="admin_user" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_JPA_HIBERNATE_DDL_AUTO" />
+                <option name="value" value="update" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_SQL_INIT_MODE" />
+                <option name="value" value="always" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
+          <option name="commandLineOptions" value="--network internal" />
+          <option name="sourceFilePath" value="auth-service/Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
@@ -321,6 +594,59 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="localstack-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="envVars">
+            <list>
+              <DockerEnvVarImpl>
+                <option name="name" value="AWS_ACCESS_KEY_ID" />
+                <option name="value" value="test" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="AWS_ENDPOINT_URL" />
+                <option name="value" value="http://localhost:4566" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="AWS_REGION" />
+                <option name="value" value="us-east-1" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="AWS_SECRET_ACCESS_KEY" />
+                <option name="value" value="test" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_CLOUD_AWS_CREDENTIALS_ACCESS_KEY" />
+                <option name="value" value="test" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_CLOUD_AWS_CREDENTIALS_SECRET_KEY" />
+                <option name="value" value="test" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_CLOUD_AWS_DYNAMODB_ENDPOINT" />
+                <option name="value" value="http://localhost:4566" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_CLOUD_AWS_REGION_STATIC" />
+                <option name="value" value="us-east-1" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_CLOUD_AWS_S3_ENDPOINT" />
+                <option name="value" value="http://localhost:4566" />
+              </DockerEnvVarImpl>
+              <DockerEnvVarImpl>
+                <option name="name" value="SPRING_CLOUD_AWS_STACK_AUTO" />
+                <option name="value" value="false" />
+              </DockerEnvVarImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="localstack-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="patient-service-db" type="docker-deploy" factoryName="docker-image" server-name="Docker">
       <deployment type="docker-image">
         <settings>
@@ -411,17 +737,35 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.LocalStack" />
+      <item itemvalue="Application.AuthService" />
       <item itemvalue="Application.api-gateway" />
       <item itemvalue="Application.BillingService" />
       <item itemvalue="Application.patientService" />
       <item itemvalue="Docker.billing-service" />
       <item itemvalue="Docker.patient-service-db" />
+      <item itemvalue="Docker.auth-service-db" />
+      <item itemvalue="Docker.auth-service" />
       <item itemvalue="Docker.patient-service" />
       <item itemvalue="Docker.analytics-service" />
       <item itemvalue="Docker.api-gateway" />
       <item itemvalue="Docker.kafka" />
+      <item itemvalue="Docker.localstack-compose.yml: Compose Deployment" />
+      <item itemvalue="JUnit.PatientIntegrationTest.shouldReturnPatientsWithValidToken" />
+      <item itemvalue="JUnit.AuthIntegrationTest.shouldReturnUnauthorizedOnInvalidLogin" />
+      <item itemvalue="JUnit.AuthIntegrationTest" />
+      <item itemvalue="JUnit.AuthIntegrationTest.shouldReturnOKWithValidToken" />
       <item itemvalue="Remote JVM Debug.Analytics-Service Remote Debug" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.localstack-compose.yml: Compose Deployment" />
+        <item itemvalue="JUnit.PatientIntegrationTest.shouldReturnPatientsWithValidToken" />
+        <item itemvalue="JUnit.AuthIntegrationTest" />
+        <item itemvalue="JUnit.AuthIntegrationTest.shouldReturnUnauthorizedOnInvalidLogin" />
+        <item itemvalue="JUnit.AuthIntegrationTest.shouldReturnOKWithValidToken" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -449,12 +793,80 @@
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/utils/jwt/JWTUtil.java</url>
+          <line>41</line>
+          <properties class="com.pm.auth_service.utils.jwt.JWTUtil" method="validateToken">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/auth-service/src/main/java/com/pm/auth_service/controller/AuthController.java</url>
+          <line>22</line>
+          <properties class="com.pm.auth_service.controller.AuthController" method="login">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/integration-tests/src/test/java/integration_tests/AuthIntegrationTest.java</url>
+          <line>44</line>
+          <properties class="integration_tests.AuthIntegrationTest" method="shouldReturnUnauthorizedOnInvalidLogin">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/integration-tests/src/test/java/integration_tests/PatientIntegrationTest.java</url>
+          <line>15</line>
+          <properties class="integration_tests.PatientIntegrationTest" method="shouldReturnPatientsWithValidToken">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/impl/PatientServiceImpl.java</url>
+          <line>51</line>
+          <properties class="com.pm.patient_service.service.impl.PatientServiceImpl" method="createPatient">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/analytics-service/src/main/java/com/pm/analytics_service/kafka/KafkaConsumer.java</url>
           <line>11</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/integration-tests/src/test/java/integration_tests/AuthIntegrationTest.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/integration-tests/src/test/java/integration_tests/AuthIntegrationTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/impl/PatientServiceImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/patient-service/src/main/java/com/pm/patient_service/service/impl/PatientServiceImpl.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/patient_managment_microservice$LocalStack.ic" NAME="LocalStack Coverage Results" MODIFIED="1768154215139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
